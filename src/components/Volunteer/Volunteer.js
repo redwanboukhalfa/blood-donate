@@ -62,9 +62,11 @@ const Volunteer = ({ volun: { voluns, loading }, getVolun }) => {
           <li className="collection-header">
             <h4 className="center"> list of donaters</h4>
           </li>
-          {!loading && voluns.length === 0
-            ? { TextHelper }
-            : voluns.map((volu) => <VolunItem volu={volu} key={volu.id} />)}
+          {!loading && voluns.length === 0 ? (
+            <p className="center"> Search for your blood </p>
+          ) : (
+            voluns.map((volu) => <VolunItem volu={volu} key={volu.id} />)
+          )}
         </ul>
       </div>
     </div>
