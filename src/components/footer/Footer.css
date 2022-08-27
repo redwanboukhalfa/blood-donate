@@ -1,0 +1,45 @@
+ .containerFooter{
+    width: 80%;
+    margin: 15rem auto 5rem auto;
+  
+     
+
+ }
+ 
+ .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap:1.5rem;
+    align-items: flex-start;
+ }
+ 
+ .box-container .box{
+    text-align: center;
+ }
+ 
+ 
+ 
+  .box-container .box h3{
+    margin:1rem 0;
+    font-size: 2rem;
+    color:var(--black);
+ }
+ 
+  .box-container .box p{
+    line-height: 2;
+    font-size: 1.6rem;
+    color:var(--light-color);
+ }
+ .credit{
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: var(--border);
+    font-size: 2rem;
+    color:var(--black);
+   padding-bottom: 7rem;  
+ }
+ 
+ .credit span{
+    color:var(--main-color);
+ }

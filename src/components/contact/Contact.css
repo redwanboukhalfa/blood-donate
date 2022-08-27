@@ -1,0 +1,65 @@
+.textarea {
+    width: 100%;
+    height: 20vh;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  }
+ #Contact{
+    height: auto;
+ }
+ #Contact .row form{
+    flex:1 1 30rem;
+    border:var(--border);
+    padding:2rem;
+    text-align: center;
+    border-radius: 30px;
+ }
+ 
+ #Contact .row form h3{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color:var(--black);
+ }
+ .gridContact{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+   gap: 5px;
+   align-items: center;
+    
+
+ 
+ }
+ .gridContact .image {
+   padding: 2rem;
+   align-items: center;
+ }
+ .gridContact .image img{
+  width: 80%;
+  height: 80%;
+ 
+ }
+  
+@media screen and (max-width:594px){
+     
+   .gridContact .image img{
+      width: 60%;
+      height: 60%;
+     
+ 
+   }
+   #Contact .row form{
+     width: 60%;
+   
+   }
+   
+ #Contact .row form h3{
+   font-size: 1.8rem;
+   margin-bottom: 1rem;
+  
+}
+}
