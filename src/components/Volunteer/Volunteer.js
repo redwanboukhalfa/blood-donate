@@ -8,23 +8,9 @@ import SearchBar from "../layout/SearchBar";
 import { getVolun } from "../../Actions/volunActions";
 
 const Volunteer = ({ volun: { voluns, loading }, getVolun }) => {
-  //const   [volunteers,setvolunteers]=useState([]);
-  //const [loading,setLoading]=useState(false);
-
   useEffect(() => {
     getVolun();
   }, []);
-
-  //const getVolun = async ()=>{
-  // setLoading(true);
-  //const  res = await fetch('/volunteers');
-  //const data = await res.json();
-  //setvolunteers(data);
-  //console.log(data);
-
-  //setLoading(false);
-
-  //}
 
   if (!loading && voluns === null) {
     return <Preloader />;
