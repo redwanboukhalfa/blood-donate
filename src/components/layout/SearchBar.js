@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { connect } from "react-redux";
 import { searchVolun } from "../../Actions/volunActions";
 import PropTypes from "prop-types";
-import { BiDonateBlood } from "react-icons/bi";
 
 const SearchBar = ({ searchVolun }) => {
   const text = useRef("");
@@ -58,13 +57,6 @@ const SearchBar = ({ searchVolun }) => {
 };
 SearchBar.Prototype = {
   searchVolun: PropTypes.func.isRequired,
-};
-const selectStyle = {
-  display: "block",
-  height: "4rem",
-  background: "transparent",
-  border: "1px solid grey ",
-  fontSize: "2rem",
 };
 
 export default connect(null, { searchVolun })(SearchBar);
