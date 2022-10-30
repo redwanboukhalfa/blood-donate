@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./Volunteer.css";
 import { connect } from "react-redux";
 import VolunItem from "./VolunItem";
@@ -16,15 +16,15 @@ const Volunteer = ({ volun: { voluns, loading }, getVolun }) => {
     return <Preloader />;
   }
 
-  const TextHelper = (
-    <>
-      {!loading && voluns.length === 0 ? (
-        <p className="center"> Search for your blood </p>
-      ) : (
-        voluns.map((volu) => <VolunItem volu={volu} key={volu.id} />)
-      )}
-    </>
-  );
+  // const TextHelper = (
+  //   <>
+  //     {!loading && voluns.length === 0 ? (
+  //       <p className="center"> Search for your blood </p>
+  //     ) : (
+  //       voluns.map((volu) => <VolunItem volu={volu} key={volu.id} />)
+  //     )}
+  //   </>
+  // );
 
   return (
     <div className="  section-p" id="Volunteer">
@@ -46,13 +46,13 @@ const Volunteer = ({ volun: { voluns, loading }, getVolun }) => {
           }}
         >
           <li className="collection-header">
-            <h4 className="center"> list of donaters</h4>
+            <h2 className="center"> List of donaters</h2>
+            {!loading && voluns.length === 0 ? (
+              <h4 className="">No Valunteers to show</h4>
+            ) : (
+              voluns.map((volu) => <VolunItem volu={volu} key={volu.id} />)
+            )}
           </li>
-          {!loading && voluns.length === 0 ? (
-            <p className="center"> Search for your blood </p>
-          ) : (
-            voluns.map((volu) => <VolunItem volu={volu} key={volu.id} />)
-          )}
         </ul>
       </div>
     </div>

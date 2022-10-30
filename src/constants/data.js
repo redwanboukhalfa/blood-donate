@@ -22,8 +22,8 @@ export const bloodTypes = [
   {
     id: 8,
     name: "O-",
-    receive: "AB+ ,A+ ",
-    receive: "AB+ ,AB- A+ ,A- ,B+ ,B- ,O-,O+",
+
+    receive: " AB- ,A- ,B- ,O-",
 
     image: `${images.ON}`,
   },
